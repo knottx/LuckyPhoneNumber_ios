@@ -1,3 +1,68 @@
-PODFILE CHECKSUM: 23f3ecabc7651f0c516e20f3b0c51aef216c4d17
+PODS:
+  - Action (4.3.0):
+    - RxCocoa (~> 6.0)
+    - RxSwift (~> 6.0)
+  - Differentiator (5.0.0)
+  - RxBiBinding (0.3.5):
+    - RxCocoa (~> 6.0)
+    - RxSwift (~> 6.0)
+  - RxBinding (0.5):
+    - RxCocoa (~> 6)
+    - RxSwift (~> 6)
+  - RxCocoa (6.1.0):
+    - RxRelay (= 6.1.0)
+    - RxSwift (= 6.1.0)
+  - RxDataSources (5.0.0):
+    - Differentiator (~> 5.0)
+    - RxCocoa (~> 6.0)
+    - RxSwift (~> 6.0)
+  - RxGesture (4.0.2):
+    - RxCocoa (~> 6.0)
+    - RxSwift (~> 6.0)
+  - RxRelay (6.1.0):
+    - RxSwift (= 6.1.0)
+  - RxSwift (6.1.0)
+  - Then (2.7.0)
+  - TPKeyboardAvoidingSwift (3.2)
+
+DEPENDENCIES:
+  - Action
+  - RxBiBinding
+  - RxBinding
+  - RxCocoa
+  - RxDataSources
+  - RxGesture
+  - RxSwift
+  - Then
+  - TPKeyboardAvoidingSwift
+
+SPEC REPOS:
+  trunk:
+    - Action
+    - Differentiator
+    - RxBiBinding
+    - RxBinding
+    - RxCocoa
+    - RxDataSources
+    - RxGesture
+    - RxRelay
+    - RxSwift
+    - Then
+    - TPKeyboardAvoidingSwift
+
+SPEC CHECKSUMS:
+  Action: 9891cd1b0a9047557d7e58e8dfae743e19d08197
+  Differentiator: e8497ceab83c1b10ca233716d547b9af21b9344d
+  RxBiBinding: c4de0aad6ee668fa73ea6ba423bc0ab5d77b986b
+  RxBinding: e3c76d02d0ee3f1a306a0fb8e8ef6f2eda65a375
+  RxCocoa: 5c51f02d562cbd94629f6c26cf0c80fe4ab8d343
+  RxDataSources: aa47cc1ed6c500fa0dfecac5c979b723542d79cf
+  RxGesture: f059f2aeef966fb17dad56ee440e76410f10e55f
+  RxRelay: 483e1a19fad961b41f0b0c0bee506f46c1ae14fe
+  RxSwift: a834e5c538e89eca0cae86f403f4fbf0336786ce
+  Then: acfe0be7e98221c6204e12f8161459606d5d822d
+  TPKeyboardAvoidingSwift: ce1a75e0bc3af6b485f8bfa1d0a8320cfc565851
+
+PODFILE CHECKSUM: 86529b46205ba86a75abeca7aa1341e420099b80
 
 COCOAPODS: 1.10.1

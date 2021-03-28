@@ -8,5 +8,18 @@ target 'LuckyPhoneNumber' do
   use_frameworks!
 
   # Pods for LuckyPhoneNumber
+  
+  #Rx
+  pod 'RxSwift'
+  pod 'RxCocoa'
+  pod 'RxGesture'
+  pod 'RxBinding'
+  pod 'RxBiBinding'
+  pod 'RxDataSources'
+  
+  pod 'Action'
+  pod 'Then'
+  pod 'TPKeyboardAvoidingSwift'
+  
 
 end
