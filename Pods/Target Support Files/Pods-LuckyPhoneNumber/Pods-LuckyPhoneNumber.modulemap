@@ -1,0 +1,6 @@
+framework module Pods_LuckyPhoneNumber {
+  umbrella header "Pods-LuckyPhoneNumber-umbrella.h"
+
+  export *
+  module * { export * }
+}
