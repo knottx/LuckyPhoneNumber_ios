@@ -12,6 +12,8 @@ class PairNumberTableViewCell: UITableViewCell {
 
     @IBOutlet weak var pairNumberLabel:UILabel!
     @IBOutlet weak var pairNumberView:UIView!
+    @IBOutlet weak var titleLabel:UILabel!
+    @IBOutlet weak var descriptionLabel:UILabel!
     
     override func prepareForReuse() {
         super.prepareForReuse()

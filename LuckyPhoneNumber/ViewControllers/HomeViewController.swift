@@ -30,6 +30,7 @@ class HomeViewController: BaseViewController {
     
     func configureView() {
         self.tableHeaderView.textField.delegate = self
+        self.tableView.keyboardDismissMode = .onDrag
         self.tableView.separatorStyle = .none
         self.tableView.register(cells: [TotalNumberTableViewCell.self,
                                         PairNumberTableViewCell.self])
@@ -76,6 +77,7 @@ class HomeViewController: BaseViewController {
                 self.alertError(error: AppError.invalidPhoneNumber)
                 return .empty()
             }
+            self.view.endEditing(true)
             self.viewModel.generateSection()
             return .empty()
         }
@@ -95,6 +97,26 @@ extension HomeViewController: UITableViewDelegate {
         switch self.viewModel.dataSource.value[indexPath.section].items[indexPath.row] {
         case .totalNumber:    return 120
         case .pairNumber:     return 80
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        switch self.viewModel.dataSource.value[section].identity {
+        case .totalNumberSection:   return 60
+        case .pairNumberSection:    return 60
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        switch self.viewModel.dataSource.value[section].identity {
+        case .totalNumberSection:
+            return TotalNumberTableHeaderSectionView.loadFromNib(of: TotalNumberTableHeaderSectionView.self).then { (view) in
+                self.viewModel.currentPhoneNumber.map({$0?.toPhoneNumber()}) ~> view.phoneNumberLabel.rx.text ~ self.bag
+            }
+        case .pairNumberSection:
+            return PairNumberTableHeaderSectionView.loadFromNib(of: PairNumberTableHeaderSectionView.self).then { (view) in
+                //
+            }
         }
     }
     

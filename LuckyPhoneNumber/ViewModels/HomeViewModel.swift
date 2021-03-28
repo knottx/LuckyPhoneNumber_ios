@@ -13,7 +13,7 @@ import RxCocoa
 class HomeViewModel {
     
     var phoneNumber = BehaviorRelay<String?>(value: nil)
-    
+    var currentPhoneNumber = BehaviorRelay<String?>(value: nil)
     var dataSource = BehaviorRelay<[HomeSectionModel]>(value: [])
     
     private let bag = DisposeBag()
@@ -40,6 +40,7 @@ class HomeViewModel {
         }
         self.dataSource.accept([.init(model: .totalNumberSection, items: total),
                                 .init(model: .pairNumberSection, items: pairNumbers)])
+        self.currentPhoneNumber.accept(self.phoneNumber.value)
     }
     
     func getTotalNumber() -> TotalNumber {

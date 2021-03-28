@@ -13,7 +13,15 @@ enum PairNumberType {
     case fight
     case good
     
-    var color:UIColor {
+    var title: String {
+        switch self {
+        case .danger:   return "pair_number_type_danger".localized()
+        case .fight:    return "pair_number_type_fight".localized()
+        case .good:     return "pair_number_type_good".localized()
+        }
+    }
+    
+    var color: UIColor {
         switch self {
         case .danger:   return .red
         case .fight:    return .orange

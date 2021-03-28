@@ -15,7 +15,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="vb4-y4-CnJ">
-                    <rect key="frame" x="64" y="32" width="286" height="143"/>
+                    <rect key="frame" x="64" y="28.5" width="286" height="143"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Input Phone Number" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4c1-aV-MPR">
                             <rect key="frame" x="0.0" y="0.0" width="286" height="17"/>
@@ -23,7 +23,7 @@
                             <color key="textColor" systemColor="systemGrayColor"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0000000000" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="t0g-cM-l1k">
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0000000000" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="t0g-cM-l1k">
                             <rect key="frame" x="0.0" y="33" width="286" height="44"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="44" id="BSc-cm-caW"/>
@@ -47,8 +47,8 @@
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="vb4-y4-CnJ" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="64" id="Spz-YG-Wls"/>
-                <constraint firstItem="vb4-y4-CnJ" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="32" id="XrK-sf-AJC"/>
                 <constraint firstAttribute="trailing" secondItem="vb4-y4-CnJ" secondAttribute="trailing" constant="64" id="mfW-1W-CQx"/>
+                <constraint firstItem="vb4-y4-CnJ" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="xeI-vu-bQI"/>
             </constraints>
             <nil key="simulatedTopBarMetrics"/>
             <nil key="simulatedBottomBarMetrics"/>

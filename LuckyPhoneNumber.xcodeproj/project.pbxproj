@@ -37,6 +37,10 @@
 		1AE6D0FB2610B18300174B7D /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE6D0FA2610B18300174B7D /* String.swift */; };
 		1AE6D1002610C37300174B7D /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1AE6D1022610C37300174B7D /* Localizable.strings */; };
 		1AE6D10B2610C5CD00174B7D /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE6D10A2610C5CD00174B7D /* AppError.swift */; };
+		1AE6D10E2610E25000174B7D /* TotalNumberTableHeaderSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE6D10D2610E24F00174B7D /* TotalNumberTableHeaderSectionView.swift */; };
+		1AE6D1112610E25700174B7D /* TotalNumberTableHeaderSectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1AE6D1102610E25700174B7D /* TotalNumberTableHeaderSectionView.xib */; };
+		1AE6D1162610EA2C00174B7D /* PairNumberTableHeaderSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE6D1152610EA2C00174B7D /* PairNumberTableHeaderSectionView.swift */; };
+		1AE6D1192610EA3A00174B7D /* PairNumberTableHeaderSectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1AE6D1182610EA3A00174B7D /* PairNumberTableHeaderSectionView.xib */; };
 		9CF95E9C7AEFC96CA20427F3 /* Pods_LuckyPhoneNumber.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C39D7775B3BB3935A1AD21F /* Pods_LuckyPhoneNumber.framework */; };
 /* End PBXBuildFile section */
 
@@ -74,6 +78,10 @@
 		1AE6D1012610C37300174B7D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		1AE6D1042610C38400174B7D /* th */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = th; path = th.lproj/Localizable.strings; sourceTree = "<group>"; };
 		1AE6D10A2610C5CD00174B7D /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
+		1AE6D10D2610E24F00174B7D /* TotalNumberTableHeaderSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalNumberTableHeaderSectionView.swift; sourceTree = "<group>"; };
+		1AE6D1102610E25700174B7D /* TotalNumberTableHeaderSectionView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TotalNumberTableHeaderSectionView.xib; sourceTree = "<group>"; };
+		1AE6D1152610EA2C00174B7D /* PairNumberTableHeaderSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PairNumberTableHeaderSectionView.swift; sourceTree = "<group>"; };
+		1AE6D1182610EA3A00174B7D /* PairNumberTableHeaderSectionView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PairNumberTableHeaderSectionView.xib; sourceTree = "<group>"; };
 		3C39D7775B3BB3935A1AD21F /* Pods_LuckyPhoneNumber.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LuckyPhoneNumber.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8041B185A586164AD1D32CA0 /* Pods-LuckyPhoneNumber.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LuckyPhoneNumber.release.xcconfig"; path = "Target Support Files/Pods-LuckyPhoneNumber/Pods-LuckyPhoneNumber.release.xcconfig"; sourceTree = "<group>"; };
 		D85106D47029C0B3D7052169 /* Pods-LuckyPhoneNumber.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LuckyPhoneNumber.debug.xcconfig"; path = "Target Support Files/Pods-LuckyPhoneNumber/Pods-LuckyPhoneNumber.debug.xcconfig"; sourceTree = "<group>"; };
@@ -214,6 +222,7 @@
 			children = (
 				1AE6D0A42610A3C800174B7D /* TableViewCells */,
 				1AE6D0DD2610ADB000174B7D /* TableHeaderViews */,
+				1AE6D1132610E58F00174B7D /* TableHeaderSectionViews */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -225,6 +234,17 @@
 				1AE6D0DA2610AD8D00174B7D /* HomeTableHeaderView.xib */,
 			);
 			path = TableHeaderViews;
+			sourceTree = "<group>";
+		};
+		1AE6D1132610E58F00174B7D /* TableHeaderSectionViews */ = {
+			isa = PBXGroup;
+			children = (
+				1AE6D10D2610E24F00174B7D /* TotalNumberTableHeaderSectionView.swift */,
+				1AE6D1102610E25700174B7D /* TotalNumberTableHeaderSectionView.xib */,
+				1AE6D1152610EA2C00174B7D /* PairNumberTableHeaderSectionView.swift */,
+				1AE6D1182610EA3A00174B7D /* PairNumberTableHeaderSectionView.xib */,
+			);
+			path = TableHeaderSectionViews;
 			sourceTree = "<group>";
 		};
 		EFA1A148D56E3CC3626EF8F0 /* Pods */ = {
@@ -308,7 +328,9 @@
 				1AE6D0A22610A3C100174B7D /* PairNumberTableViewCell.xib in Resources */,
 				1AE6D0AA2610A3E100174B7D /* TotalNumberTableViewCell.xib in Resources */,
 				1AE6CFF12610969900174B7D /* LaunchScreen.storyboard in Resources */,
+				1AE6D1192610EA3A00174B7D /* PairNumberTableHeaderSectionView.xib in Resources */,
 				1AE6D1002610C37300174B7D /* Localizable.strings in Resources */,
+				1AE6D1112610E25700174B7D /* TotalNumberTableHeaderSectionView.xib in Resources */,
 				1AE6CFEE2610969900174B7D /* Assets.xcassets in Resources */,
 				1AE6CFEC2610969700174B7D /* Main.storyboard in Resources */,
 				1AE6D0DB2610AD8D00174B7D /* HomeTableHeaderView.xib in Resources */,
@@ -372,6 +394,7 @@
 				1AE6D05326109B8C00174B7D /* UIViewController.swift in Sources */,
 				1AE6D04526109A4900174B7D /* PairNumberType.swift in Sources */,
 				1AE6D0D12610A9F400174B7D /* TotalNumberDetailViewController.swift in Sources */,
+				1AE6D10E2610E25000174B7D /* TotalNumberTableHeaderSectionView.swift in Sources */,
 				1AE6CFE52610969700174B7D /* AppDelegate.swift in Sources */,
 				1AE6D04826109ADA00174B7D /* Storyboard.swift in Sources */,
 				1AE6D0A92610A3E100174B7D /* TotalNumberTableViewCell.swift in Sources */,
@@ -379,6 +402,7 @@
 				1AE6D0FB2610B18300174B7D /* String.swift in Sources */,
 				1AE6D10B2610C5CD00174B7D /* AppError.swift in Sources */,
 				1AE6D05926109BB600174B7D /* UITableView.swift in Sources */,
+				1AE6D1162610EA2C00174B7D /* PairNumberTableHeaderSectionView.swift in Sources */,
 				1AE6D09B2610A31800174B7D /* HomeSectionModel.swift in Sources */,
 				1AE6D0D42610AA4400174B7D /* TotalNumberDetailViewModel.swift in Sources */,
 				1AE6CFE72610969700174B7D /* SceneDelegate.swift in Sources */,
