@@ -21,7 +21,7 @@ class PairNumberTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        self.pairNumberView.setViewCornerRadius(6)
     }
     
     func configure(item: PairNumber) {

@@ -41,6 +41,25 @@ class ViewController: UIViewController {
         self.view.endEditing(true)
     }
 
-    
+    func textLimit(existingText: String?, newText: String, limit: Int) -> Bool {
+        let text = existingText ?? ""
+        let isAtLimit = text.count + newText.count <= limit
+        return isAtLimit
+    }
 
+    func alertError(error:Error) {
+        if let appError = error as? AppError {
+            self.alert(title: appError.title, message: appError.message)
+        }else{
+            self.alert(title: "error_title".localized(), message: error.localizedDescription)
+        }
+    }
+    
+    func alert(title:String, message:String) {
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "common_ok".localized(), style: .default, handler: nil)
+        alertController.addAction(okAction)
+        self.present(alertController, animated: true, completion: nil)
+    }
+    
 }

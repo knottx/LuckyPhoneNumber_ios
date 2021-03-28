@@ -18,5 +18,14 @@ extension UIView {
         return UINib(nibName: self.identifier(), bundle: nil).instantiate(withOwner: nil, options: nil).first as! T
     }
     
+    
+    func setViewCornerRadius(_ value:CGFloat, masksToBounds:Bool = true) {
+        self.layer.cornerRadius = value
+        self.layer.masksToBounds = masksToBounds
+    }
+    
+    func setViewCircle(masksToBounds:Bool = true) {
+        self.setViewCornerRadius(self.frame.height / 2, masksToBounds: masksToBounds)
+    }
 }
 

@@ -9,14 +9,6 @@
 import Foundation
 import RxSwift
 
-extension ObservableType where Element == String {
-    func toPhoneNumber() -> Observable<Element> {
-        return asObservable().flatMap { phoneNumber -> Observable<Element> in
-          return Observable.just(phoneNumber.toPhoneNumber())
-        }
-    }
-}
-
 extension String {
     
     func toPhoneNumber() -> String {
@@ -38,4 +30,17 @@ extension String {
         return result
     }
     
+    func localized(_ bundle: Bundle? = nil) -> String {
+        let value = NSLocalizedString(self, comment: "")
+        if value != self || NSLocale.preferredLanguages.first == "en" {
+            return value
+        }
+        // Fall back to en
+        guard let path = Bundle.main.path(forResource: "en", ofType: "lproj"),
+              let bundle = Bundle(path: path)
+        else {
+            return value
+        }
+        return NSLocalizedString(self, bundle: bundle, comment: "")
+    }
 }

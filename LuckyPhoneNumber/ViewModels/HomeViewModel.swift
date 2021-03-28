@@ -22,10 +22,20 @@ class HomeViewModel {
         
     }
     
+    func isValidPhoneNumber() -> Bool {
+        guard let phoneNumber = self.phoneNumber.value,
+              phoneNumber.count == 10,
+              phoneNumber.first == "0" else {
+            return false
+        }
+        return true
+    }
+    
     func generateSection() {
         let total:[HomeSectionItem] = [.totalNumber(totalNumber: self.getTotalNumber())]
         var pairNumbers:[HomeSectionItem] = []
-        self.getPairNumbers().forEach { (pairNumber) in
+        let pairs = self.getPairNumbers()
+        pairs.forEach { (pairNumber) in
             pairNumbers.append(.pairNumber(pairNumber: pairNumber))
         }
         self.dataSource.accept([.init(model: .totalNumberSection, items: total),
@@ -34,20 +44,20 @@ class HomeViewModel {
     
     func getTotalNumber() -> TotalNumber {
         guard let phoneNumber = self.phoneNumber.value else { return .t0 }
-        let total = Array(arrayLiteral: phoneNumber).map({Int($0) ?? 0}).reduce(0, +)
+        let total = Array(phoneNumber).map({Int(String($0)) ?? 0}).reduce(.zero, +)
         return TotalNumber.init(rawValue: String(total)) ?? .t0
     }
     
     func getPairNumbers() -> [PairNumber] {
         guard let phoneNumber = self.phoneNumber.value else { return [] }
-        let array = Array(arrayLiteral: phoneNumber)
+        let array = Array(phoneNumber).map({String($0)})
         var pairNumbers:[PairNumber] = []
-        guard array.count > 1 else { return [] }
+        guard array.count > 9 else { return [] }
         for index in 0 ..< (array.count - 1) {
             if let pair = PairNumber(rawValue: array[index] + array[index + 1]) {
                 pairNumbers.append(pair)
             }
         }
-        return pairNumbers
+        return Array(pairNumbers.dropFirst(3))
     }
 }

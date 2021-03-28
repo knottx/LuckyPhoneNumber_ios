@@ -1,0 +1,17 @@
+/* 
+  Localizable.strings
+  LuckyPhoneNumber
+
+  Created by Visarut Tippun on 28/3/21.
+  Copyright © 2021 knottx. All rights reserved.
+*/
+
+"common_ok" = "ตกลง";
+"common_analyze" = "วิเคราห์";
+
+
+// MARK: - Error
+
+"error_title" = "ข้อผิดพลาด";
+"invalid_phone_number" = "หมายเลขโทรศัพท์ไม่ถูกต้อง";
+"invalid_phone_number_message" = "กรุณาใส่หมายเลขโทรศัพท์ 10 หลัก";

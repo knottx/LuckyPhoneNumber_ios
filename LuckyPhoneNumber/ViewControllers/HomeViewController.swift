@@ -29,10 +29,12 @@ class HomeViewController: BaseViewController {
     }
     
     func configureView() {
+        self.tableHeaderView.textField.delegate = self
         self.tableView.separatorStyle = .none
         self.tableView.register(cells: [TotalNumberTableViewCell.self,
                                         PairNumberTableViewCell.self])
         self.tableView.rx.setDelegate(self).disposed(by: self.bag)
+        
     }
     
     func bindViewModel() {
@@ -66,15 +68,25 @@ class HomeViewController: BaseViewController {
             }
         }).disposed(by: self.bag)
         
-        self.tableHeaderView.textField.rx.text.orEmpty.toPhoneNumber() ~> self.viewModel.phoneNumber ~ self.bag
+        self.viewModel.phoneNumber <~> self.tableHeaderView.textField.rx.text ~ self.bag
         
+        self.tableHeaderView.textField.inputAccessoryView = self.doneToolbar()
         self.tableHeaderView.actionButton.rx.action = CocoaAction {
+            guard self.viewModel.isValidPhoneNumber() else {
+                self.alertError(error: AppError.invalidPhoneNumber)
+                return .empty()
+            }
             self.viewModel.generateSection()
             return .empty()
         }
     }
     
-    
+}
+
+extension HomeViewController: UITextFieldDelegate {
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        return self.textLimit(existingText: textField.text, newText: string, limit: 10)
+    }
 }
 
 extension HomeViewController: UITableViewDelegate {
